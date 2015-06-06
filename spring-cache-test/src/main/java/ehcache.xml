@@ -1,0 +1,26 @@
+<ehcache>
+	<!-- <diskStore path="java.io.tmpdir"/> -->
+	<diskStore path="D:/ehcache" />
+<!-- 	<cacheManagerPeerListenerFactory -->
+<!-- 		class="org.terracotta.ehcachedx.monitor.probe.ProbePeerListenerFactory" -->
+<!-- 		properties="monitorAddress=localhost, monitorPort=9889, memoryMeasurement=true" /> -->
+	<defaultCache eternal="false" timeToIdleSeconds="120"
+		timeToLiveSeconds="120" diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU">
+	</defaultCache>
+	<cache name="books" 
+		maxElementsInMemory="200" 
+		eternal="false"
+		timeToIdleSeconds="200" 
+		timeToLiveSeconds="2" >
+		<cacheEventListenerFactory class="me.ehcache.persistence.MyCacheEventListenerFactory" 
+			properties="" listenFor="local"/>
+		<cacheWriter writeMode="Write-Through" notifyListenersOnException="false"
+				maxWriteDelay="0" rateLimitPerSecond="0" writeCoalescing="false"
+				writeBatching="false" writeBatchSize="1" retryAttempts="0"
+				retryAttemptDelaySeconds="0">
+			<cacheWriterFactory class="me.ehcache.persistence.WriteThroughTestCacheWriterFactory" 
+				properties="just.some.property=test; another.property=test2" propertySeparator=";"/>
+		</cacheWriter>
+	</cache>
+</ehcache>

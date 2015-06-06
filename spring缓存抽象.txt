@@ -1,0 +1,12 @@
+spring缓存抽象：
+spring 缓存通过schame Extensible XML authoring 扩展
+http\://www.springframework.org/schema/cache=org.springframework.cache.config.CacheNamespaceHandler
+http\://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache-3.1.xsd
+http\://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache-3.1.xsd
+
+CacheNamespaceHandler 类很关键，增加schema实际的处理方法与逻辑。
+如：registerBeanDefinitionParser("annotation-driven", new AnnotationDrivenCacheBeanDefinitionParser());
+增加annotation-driven。
+
+增加驱动后，在程序中使用注释方式可为程序增加缓存，缓存执行方法：
+Object org.springframework.cache.interceptor.CacheAspectSupport.execute(Invoker invoker, Object target, Method method, Object[] args)

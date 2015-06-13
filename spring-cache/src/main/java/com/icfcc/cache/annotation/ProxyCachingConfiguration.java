@@ -27,7 +27,7 @@ import com.icfcc.cache.interceptor.CacheOperationSource;
  * to enable proxy-based annotation-driven cache management.
  *
  * @author Chris Beams
- * @see EnableCaching
+// * @see EnableCaching
  * @see CachingConfigurationSelector
  * @since 3.1
  */
@@ -40,7 +40,7 @@ public class ProxyCachingConfiguration extends AbstractCachingConfiguration {
         BeanFactoryCacheOperationSourceAdvisor advisor =
                 new BeanFactoryCacheOperationSourceAdvisor();
         advisor.setCacheOperationSource(cacheOperationSource());
-        advisor.setAdvice(cacheInterceptor());
+        //advisor.setAdvice(cacheInterceptor());
         advisor.setOrder(((Integer) this.enableCaching.get("order")));
         return advisor;
     }

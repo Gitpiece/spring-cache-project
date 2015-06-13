@@ -4,7 +4,7 @@
 
   <groupId>me.spring</groupId>
   <artifactId>spring-cache-project</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>${spring-cache-version}</version>
   <modules>
     <module>spring-cache-test</module>
     <module>spring-cache</module>
@@ -16,6 +16,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <spring-cache-version>0.1-SNAPSHOT</spring-cache-version>
   </properties>
 
 </project>

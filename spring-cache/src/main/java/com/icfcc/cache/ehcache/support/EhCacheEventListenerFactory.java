@@ -1,4 +1,4 @@
-package me.ehcache.persistence;
+package com.icfcc.cache.ehcache.support;
 
 import net.sf.ehcache.event.CacheEventListener;
 import net.sf.ehcache.event.CacheEventListenerFactory;
@@ -10,12 +10,12 @@ import java.util.Properties;
  * @author wanghuanyu
  *
  */
-public class MyCacheEventListenerFactory extends
+public class EhCacheEventListenerFactory extends
 		CacheEventListenerFactory {
 
 	@Override
 	public CacheEventListener createCacheEventListener(Properties properties) {
-		return new MyCacheEventListener(properties);
+		return new EhCacheEventListener(properties);
 	}
 
 }

@@ -1,4 +1,4 @@
-package me.ehcache.persistence;
+package com.icfcc.cache.ehcache.support;
 
 import net.sf.ehcache.CacheException;
 import net.sf.ehcache.Ehcache;
@@ -12,10 +12,10 @@ import java.util.Properties;
  * @author wanghuanyu
  *
  */
-public class MyCacheEventListener implements CacheEventListener {
+public class EhCacheEventListener implements CacheEventListener {
 
 
-	public MyCacheEventListener(Properties properties) {
+	public EhCacheEventListener(Properties properties) {
 
 	}
 

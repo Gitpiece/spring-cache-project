@@ -1,5 +1,8 @@
 package com.icfcc.cache;
 
+/**
+ * pojo object
+ */
 public class Book {
 
 	private String bookname;

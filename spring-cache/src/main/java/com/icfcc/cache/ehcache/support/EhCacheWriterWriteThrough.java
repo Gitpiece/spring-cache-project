@@ -1,4 +1,4 @@
-package me.ehcache.persistence;
+package com.icfcc.cache.ehcache.support;
 
 import net.sf.ehcache.CacheEntry;
 import net.sf.ehcache.CacheException;
@@ -10,10 +10,10 @@ import net.sf.ehcache.writer.writebehind.operations.SingleOperationType;
 import java.util.Collection;
 import java.util.Properties;
 
-class WriteThroughTestCacheWriter implements CacheWriter{
+class EhCacheWriterWriteThrough implements CacheWriter{
 
-	public WriteThroughTestCacheWriter(Ehcache cache, Properties properties) {
-		System.out.println("create WriteThroughTestCacheWriter.");
+	public EhCacheWriterWriteThrough(Ehcache cache, Properties properties) {
+		System.out.println("create EhCacheWriterWriteThrough.");
 	}
 
 	public CacheWriter clone(Ehcache cache) throws CloneNotSupportedException {

@@ -12,14 +12,14 @@
 		maxElementsInMemory="200" 
 		eternal="false"
 		timeToIdleSeconds="200" 
-		timeToLiveSeconds="2" >
-		<cacheEventListenerFactory class="me.ehcache.persistence.MyCacheEventListenerFactory" 
+		timeToLiveSeconds="200" >
+		<cacheEventListenerFactory class="com.icfcc.cache.ehcache.support.EhCacheEventListenerFactory"
 			properties="" listenFor="local"/>
 		<cacheWriter writeMode="Write-Through" notifyListenersOnException="false"
 				maxWriteDelay="0" rateLimitPerSecond="0" writeCoalescing="false"
 				writeBatching="false" writeBatchSize="1" retryAttempts="0"
 				retryAttemptDelaySeconds="0">
-			<cacheWriterFactory class="me.ehcache.persistence.WriteThroughTestCacheWriterFactory" 
+			<cacheWriterFactory class="com.icfcc.cache.ehcache.support.EhCacheWriterWriteThroughFactory"
 				properties="just.some.property=test; another.property=test2" propertySeparator=";"/>
 		</cacheWriter>
 	</cache>

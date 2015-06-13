@@ -3,7 +3,7 @@
     <parent>
         <artifactId>spring-cache-project</artifactId>
         <groupId>me.spring</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>${spring-cache-version}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -41,12 +41,6 @@
             <artifactId>ehcache-core</artifactId>
             <version>2.6.11</version>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
     <build>
@@ -65,6 +59,24 @@
             </resource>
         </resources>
 
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                    <verbose>true</verbose>
+                    <fork>true</fork>
+                    <forceJavacCompilerUse>true</forceJavacCompilerUse>
+                    <compilerVersion>1.5</compilerVersion>
+                </configuration>
+            </plugin>
+        </plugins>
+
     </build>
+
+
 
 </project>

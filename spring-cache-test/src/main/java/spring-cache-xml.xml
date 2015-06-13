@@ -9,16 +9,13 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
 http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
 http://www.icfcc.com/schema/spring-cache http://www.icfcc.com/schema/spring-cache/spring-cache.xsd">
 
-    <!-- as a top-level bean -->
-    <spring-cache:dateformat id="defaultDateFormat" pattern="yyyy-MM-dd HH:mm" lenient="true"/>
-
-    <spring-cache:annotation-driven />
+<bean id="cacheTest" class="com.icfcc.cache.BookService"/>
 
     <bean id="cacheManager" class="com.icfcc.cache.ehcache.EhCacheCacheManager"
           p:cacheManager-ref="ehcache" />
 
     <!-- Ehcache library setup -->
-    <bean id="ehcache" class="com.icfcc.cache.ehcache.EhCacheManagerFactoryBean"
+    <bean id="ehcache" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean"
           p:configLocation="ehcache.xml" />
 
     <!-- cache definitions -->
@@ -29,9 +26,9 @@ http://www.icfcc.com/schema/spring-cache http://www.icfcc.com/schema/spring-cach
         </spring-cache:caching>
     </spring-cache:advice>
 
-    <!--&lt;!&ndash; apply the cacheable behaviour to all BookService interfaces &ndash;&gt;-->
-    <!--<aop:config>-->
-        <!--<aop:advisor advice-ref="cacheAdvice" pointcut="execution(* com.icfcc.cache.CacheTest.*(..))"/>-->
-    <!--</aop:config>-->
+    <!-- apply the cacheable behaviour to all BookService interfaces -->
+    <aop:config>
+        <aop:advisor advice-ref="cacheAdvice" pointcut="execution(* com.icfcc.cache.BookService.*(..))"/>
+    </aop:config>
 
 </beans>

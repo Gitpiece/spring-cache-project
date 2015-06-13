@@ -36,7 +36,7 @@ public class CacheNamespaceHandler extends NamespaceHandlerSupport {
 
     public void init() {
         registerBeanDefinitionParser("annotation-driven", new AnnotationDrivenCacheBeanDefinitionParser());
-        registerBeanDefinitionParser("advice", new CacheAdviceParser());
-        registerBeanDefinitionParser("dateformat", new SimpleDateFormatBeanDefinitionParser());
+        //registerBeanDefinitionParser("advice", new CacheAdviceParser());
+        //registerBeanDefinitionParser("dateformat", new SimpleDateFormatBeanDefinitionParser());
     }
 }

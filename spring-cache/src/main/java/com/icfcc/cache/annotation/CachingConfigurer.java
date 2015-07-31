@@ -16,8 +16,8 @@
 
 package com.icfcc.cache.annotation;
 
-import com.icfcc.cache.CacheManager;
 import com.icfcc.cache.interceptor.KeyGenerator;
+import com.icfcc.cache.CacheManager;
 
 /**
  * Interface to be implemented by @{@link org.springframework.context.annotation.Configuration

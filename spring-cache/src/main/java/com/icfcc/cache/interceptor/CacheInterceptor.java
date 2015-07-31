@@ -1,6 +1,7 @@
 package com.icfcc.cache.interceptor;
 
 
+import com.icfcc.cache.Cache;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 
@@ -10,7 +11,7 @@ import java.lang.reflect.Method;
 /**
  * AOP Alliance MethodInterceptor for declarative cache
  * management using the common Spring caching infrastructure
- * ({@link com.icfcc.cache.Cache}).
+ * ({@link Cache}).
  *
  * <p>Derives from the {@link CacheAspectSupport} class which
  * contains the integration with Spring's underlying caching API.

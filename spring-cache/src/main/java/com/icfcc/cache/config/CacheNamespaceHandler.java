@@ -19,7 +19,9 @@ import org.w3c.dom.Element;
 public class CacheNamespaceHandler extends NamespaceHandlerSupport {
     static final String CACHE_MANAGER_ATTRIBUTE = "cache-manager";
     static final String DEFAULT_CACHE_MANAGER_BEAN_NAME = "cacheManager";
-
+    static final String KEY_GENERATOR_ATTRIBUTE = "key-generator";
+    static final String KEY_GENERATOR_PROPERTY_NAME = "keyGenerator";
+    
     static String extractCacheManager(Element element) {
         return (element.hasAttribute(CacheNamespaceHandler.CACHE_MANAGER_ATTRIBUTE) ? element
                 .getAttribute(CacheNamespaceHandler.CACHE_MANAGER_ATTRIBUTE)
@@ -27,9 +29,9 @@ public class CacheNamespaceHandler extends NamespaceHandlerSupport {
     }
 
     static BeanDefinition parseKeyGenerator(Element element, BeanDefinition def) {
-        String name = element.getAttribute("key-generator");
+        String name = element.getAttribute(KEY_GENERATOR_ATTRIBUTE);
         if (StringUtils.hasText(name)) {
-            def.getPropertyValues().addPropertyValue(new PropertyValue("keyGenerator", new RuntimeBeanReference(name.trim())));
+            def.getPropertyValues().addPropertyValue(new PropertyValue(KEY_GENERATOR_PROPERTY_NAME, new RuntimeBeanReference(name.trim())));
         }
         return def;
     }

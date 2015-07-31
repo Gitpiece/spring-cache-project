@@ -4,7 +4,7 @@
 	   xmlns:p="http://www.springframework.org/schema/p"
 	   xmlns:spring-cache="http://www.icfcc.com/schema/spring-cache"
 	   xsi:schemaLocation="
-http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.icfcc.com/schema/spring-cache http://www.icfcc.com/schema/spring-cache/spring-cache.xsd">
 
 	<spring-cache:annotation-driven />

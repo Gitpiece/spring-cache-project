@@ -16,8 +16,8 @@
 
 package com.icfcc.cache.annotation;
 
-import com.icfcc.cache.CacheManager;
 import com.icfcc.cache.interceptor.KeyGenerator;
+import com.icfcc.cache.CacheManager;
 import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;

@@ -19,4 +19,9 @@ public class Book {
 		this.bookname = bookname;
 	}
 
+
+	public String toString(){
+		return this.bookname + " : " +super.toString();
+	}
+
 }

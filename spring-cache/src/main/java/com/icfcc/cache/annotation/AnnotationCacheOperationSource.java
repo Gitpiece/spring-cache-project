@@ -16,6 +16,7 @@
 
 package com.icfcc.cache.annotation;
 
+import com.icfcc.cache.interceptor.*;
 import com.icfcc.cache.interceptor.AbstractFallbackCacheOperationSource;
 import com.icfcc.cache.interceptor.CacheOperation;
 import org.springframework.util.Assert;
@@ -26,7 +27,7 @@ import java.lang.reflect.Method;
 import java.util.*;
 
 /**
- * Implementation of the {@link com.icfcc.cache.interceptor.CacheOperationSource
+ * Implementation of the {@link CacheOperationSource
  * CacheOperationSource} interface for working with caching metadata in annotation format.
  *
  * <p>This class reads Spring's {@link Cacheable}, {@link CachePut} and {@link CacheEvict}

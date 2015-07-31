@@ -1,9 +1,10 @@
 package com.icfcc.cache.support;
 
+import com.icfcc.cache.Cache;
 import com.icfcc.cache.Cache.ValueWrapper;
 
 /**
- * Straightforward implementation of {@link com.icfcc.cache.Cache.ValueWrapper},
+ * Straightforward implementation of {@link Cache.ValueWrapper},
  * simply holding the value as given at construction and returning it from {@link #get()}.
  *
  * @author Costin Leau

@@ -1,7 +1,7 @@
 package com.icfcc.cache;
 
-import com.icfcc.cache.annotation.CacheEvict;
 import com.icfcc.cache.annotation.Cacheable;
+import com.icfcc.cache.annotation.CacheEvict;
 
 /**
  * book service class.
@@ -27,7 +27,7 @@ public class BookService {
         return book;
     }
 
-    @CacheEvict(value = "books", key = "#book.bookname")
+    @CacheEvict(value = "books", key = "#book.bookname" )
     public void deleteBook(Book book){
 
     }

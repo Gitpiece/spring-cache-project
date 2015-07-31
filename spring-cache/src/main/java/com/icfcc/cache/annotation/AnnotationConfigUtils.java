@@ -84,7 +84,7 @@ public class AnnotationConfigUtils {
      * The bean name of the internally managed cache advisor.
      */
     public static final String CACHE_ADVISOR_BEAN_NAME =
-            "org.springframework.cache.config.internalCacheAdvisor";
+            "com.icfcc.cache.config.internalCacheAdvisor";
 
     /**
      * The bean name of the internally managed cache aspect.

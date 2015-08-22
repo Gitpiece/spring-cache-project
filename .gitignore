@@ -1,0 +1,13 @@
+/spring-cache/build
+/spring-cache-test/build
+/spring-cache/spring-cache.iml
+/spring-cache-test/spring-cache-test.iml
+/spring-cache-project.ipr
+/spring-cache-project.iws
+/spring-cache-project.iml
+# Created by .ignore support plugin (hsz.mobi)
+/report-poi.iml
+/target
+/build
+/.gradle
+/.idea

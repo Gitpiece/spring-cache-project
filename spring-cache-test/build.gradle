@@ -1,0 +1,19 @@
+
+description = ''
+dependencies {
+    compile group: 'org.springframework', name: 'spring-expression', version:'3.0.5.RELEASE'
+    compile group: 'commons-logging', name: 'commons-logging', version:'1.2'
+    compile group: 'net.sf.ehcache', name: 'ehcache-core', version:'2.6.11'
+    compile group: 'cglib', name: 'cglib-nodep', version:'2.1_3'
+    compile group: 'asm', name: 'asm', version:'2.2.3'
+    compile group: 'asm', name: 'asm-commons', version:'2.2.3'
+    compile group: 'asm', name: 'asm-util', version:'2.2.3'
+    compile group: 'org.aspectj', name: 'aspectjrt', version:'1.6.0'
+    compile group: 'org.aspectj', name: 'aspectjweaver', version:'1.6.0'
+    compile group: 'log4j', name: 'log4j', version:'1.2.17'
+	//compile fileTree(dir: 'lib', include: '*.jar')
+    compile project(':spring-cache')
+	
+    testCompile group: 'org.testng', name: 'testng', version:'6.9.4'
+}
+test.useTestNG()

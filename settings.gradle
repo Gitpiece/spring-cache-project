@@ -1,0 +1,6 @@
+rootProject.name = 'spring-cache-project'
+include ':spring-cache-test'
+include ':spring-cache'
+
+project(':spring-cache-test').projectDir = "$rootDir/spring-cache-test" as File
+project(':spring-cache').projectDir = "$rootDir/spring-cache" as File
